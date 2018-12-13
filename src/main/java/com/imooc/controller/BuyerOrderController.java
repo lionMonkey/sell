@@ -90,7 +90,7 @@ public class BuyerOrderController {
     //取消订单
     @GetMapping("/cancel")
     public ResultVO cancel(@RequestParam("openid")String openid,@RequestParam("orderId")String orderId){
-//        //TODO 不安全改进
+//        //TODO不安全改进
 //        OrderDTO orderDTO = orderService.findOne(orderId);
 //        orderService.cancel((orderDTO));
         buyerService.cancelOrder(openid,orderId);
